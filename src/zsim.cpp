@@ -28,7 +28,13 @@
 
 #include "zsim.h"
 #include <algorithm>
-#include <bits/signum.h>
+
+//
+// fool signum-generic to work
+//
+#define _SIGNAL_H
+ #include <bits/signum-generic.h>
+//#include <signal.h>
 #include <dlfcn.h>
 #include <execinfo.h>
 #include <fstream>
